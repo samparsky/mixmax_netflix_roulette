@@ -38,22 +38,9 @@ function getList(res,term){
 		res.status(500).send({title: 'No results found', text: 'Sorry! We couldn\'t find a movie with that title!'});
 		return;
 	}
-
-	// var results = _.chain((JSON.parse(response.body)).response.books)
-
-	// 			.reject(function(item){
-	// 				return !item.name || !item;
-	// 			})
-	// 			.map(function(item){
-	// 				return {
-
-	// 					title : item.summary,
-	// 					text : item.rating
-	// 				}
-
-	// 			}).value();
+	
 	var data = JSON.parse(response.body);	
-	if(results.length > 0){
+	if(data.show_title){
 		res.json([{
 			title: '<i>'+data.show_title+'</i>',
 			text: '<p> Release Year:' + data.release_year+'</p>',
