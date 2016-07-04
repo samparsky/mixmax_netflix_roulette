@@ -31,11 +31,19 @@ function getList(res,term){
 		return;
 	}
 
+<<<<<<< HEAD
 	console.log(response.statusCode);
 	console.log(response.body);
 
 	if(response.statusCode !== 200 || !response.body){
 		res.status(500).send({title: 'No results found', text: 'Sorry! We couldn\'t find a movie with that title!'});
+		return;
+	}
+
+	// var results = _.chain((JSON.parse(response.body)))
+=======
+	if(response.statusCode !== 200 || !response.body){
+		res.status(500).send('Error');
 		return;
 	}
 

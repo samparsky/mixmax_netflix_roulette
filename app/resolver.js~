@@ -35,10 +35,11 @@ var handleSearchQuery = function(term, req, res){
 	}
 
 	var data = JSON.parse(result.body);
-
+<<<<<<< HEAD
 	console.log("resolver");
 	console.log(data);
-
+=======
+>>>>>>> 084a9405e6743b6dcf55ee8cc5d41987e32974bd
 	//var data = JSON.parse(r_data).response.search.result.passages[0].text;
 	if(data.poster){
 		var html = '<div style="max-width:100%;min-width:100%;border:5px dotted #eee;padding:20px;">'+
